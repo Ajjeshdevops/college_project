@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+      body, html {
+    height: 100%;
+}
+.bg { 
+    /* The image used */
+    background-image: url('data:image/jpeg;base64,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');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head {
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  border-bottom: double;
+  text-align: center;
+}
+
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+
+.tablink {
+    background-color: #FEA127;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: green;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    width: 855px;
+    position: relative;
+    height: 350px;
+}
+
+#footer{background-color: black;
+text-decoration: underline;
+text-align: center;
+font-family: sans-serif;
+text-decoration-color: white;
+color: white;
+align-self: bottom;}
+#Symptom {background-color:#78A9FD; width: 600px; top:45px ;left: 50px;height:450px;}
+#Doctor {background-color: #78A9FD; width: 600px;top:45px; left: 50px}
+#Drug {background-color: #78A9FD; width: 600px;top:45px ;left: 50px}     
+      
+    </style>
+
+  </head>
+  <body>
+    {% block body%}
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-center">
+          <li class=""><a style="margin-left: -700%; font-size:large;color: black;" href="/">HOME</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <div class="bg"> 
+      
+      <div>
+        <!--
+      <center><img src="https://lh3.googleusercontent.com/XGu4L46rhIGXaY60ejWMFXkyctL0J4BymlqWBUqKnPlbh9CiTyqIIBI1QBQ4HLO35LozJV2wmp8=w328-h299-no" 
+        style="height:70px; width: 70px; position: absolute;top:20px; left:560px">-->
+      <span style="margin-left:35%;  font-size:50px; text-shadow: 3px 3px 6px #40e0d0;font-weight: bolder;font-family:'Garamound';color:blue">Disease Prediction</span>
+      </div>
+      <br>
+      
+    <div >
+        <button class="tablink" onclick="openTab('Symptom', this, 'red')" id="defaultOpen" style="width: 300px; position: absolute; top: 135px; left:355px; ">Symptom checker</button>
+        <button class="tablink" onclick="openTab('Doctor', this, 'red')" id="doctortab" style="width: 300px; position: absolute; top: 135px; left:625px; ">Find My Doctor</button>
+        <!-- <button class="tablink" onclick="openTab('Drug', this, 'red')" id="drugdetail" style="width: 200px; position: absolute; top: 175px; left:450px; ">Know My Drug</button> -->
+</div>
+
+<div style="margin-left: 22%;" id="Symptom" class="tabcontent">
+  <form name="SymptomForm" id="SymForm" method="POST" action=/disease_predict>
+    <div class="head">
+      Symptom Checker
+    </div>
+    <div class="form-group">
+      <!-- <select multiple data-role="tagsinput" class="form-control" size=1>
+          {% for symp in symptoms  %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </select> -->
+      <label for="Symptom1" align="left">Symptom1</label>
+      <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom1">
+      <datalist id="symp">
+          {% for symp in symptoms %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </datalist>
+
+      <label for="Symptom2" align="left">Symptom2</label>
+      <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom2">
+      <datalist id="symp">
+          {% for symp in symptoms %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </datalist>
+
+      <label for="Symptom3" align="left">Symptom3</label>
+      <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom3">
+      <datalist id="symp">
+          {% for symp in symptoms %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </datalist>
+
+      <label for="Symptom4" align="left">Symptom4</label>
+      <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom4">
+      <datalist id="symp">
+          {% for symp in symptoms %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </datalist>
+
+      <label for="Symptom5" align="left">Symptom5</label>
+      <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom5">
+      <datalist id="symp">
+          {% for symp in symptoms %}
+          <option value= "{{symp}}">{{symp}}</option>
+        {% endfor %}
+      </datalist>
+
+    </div>
+    
+    <button style="margin-left: 45%;" type="submit" class="btn btn-primary" style="padding: 10px;" name=form>Check</button>
+</form>
+</div>
+
+<div id="Doctor" class="tabcontent">
+  <div class="head">
+      Find My Doctor
+    </div>
+    <form name="Doctor_search" id="DoctorForm" method="POST" action=/find_doctor>
+ <input type="text" class="form-control" name="doctor"><br>
+ <button type="submit" class="btn btn-primary" style="padding: 10px;" name="search_doctor">Search</button>
+ </form>
+</div>
+
+
+<!-- <div id="Drug" class="tabcontent">
+  <form name="MedicineForm" id="medForm" method="POST">
+    <div class="head">
+      Know Your Drug
+    </div>
+    <div class="form-group">
+        <label for="medicine" align="left">Name</label>
+        <input type="text" class="form-control" id="medicine" placeholder="medicine name" name="medicine">
+        <br>
+      <button class="btn btn-primary" type="submit" method='POST'>Know about it</button>
+    </div>
+  </form>
+<script type="text/javascript">
+  function showResult(argument) {
+    // body...
+    document.getElementById(argument).style.color = "white";
+  }
+</script>
+</div> -->
+
+</div>
+
+</div>
+<script>
+
+  
+function openTab(tabName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(tabName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+    {% endblock %}
+  </body>
+</html>
